@@ -2,13 +2,28 @@
 #include <list>
 #include "PublicFunctions.h"
 #include <fstream>
+#include "Organizer.h"
 
 int main () {
-	list<Team> t;
+	list<Team> t ,ti;
 	Team team;
 	vector<Player> v(11);
 	string s, teamName, playerName;
 	int nteams, playerNumber, method;
+	//mido's code
+	Organizer o;
+	Team arr[16];
+	for (int i = 0; i < 16; i++)
+	{
+		arr[i].SetName("T" + to_string(i));
+	}
+	for (int i = 0; i < 16; i++)
+	{
+		ti.push_back(arr[i]);
+	}
+
+	o.MakeSchedule(ti);
+	//end of mido's code
 	cout <<"Welcome to World Cup App\n========================="<<endl;
 	cout <<"To enter teams via file parsing press (1)\nTo enter teams manually press (2)\n=> ";
 	cin >> method;
@@ -96,23 +111,4 @@ int main () {
 		}
 	}
 	
-
-
-
-
-
-
-
-
-	/*for (int i = 0; i < 11; i++)
-	{
-		s = to_string(i);
-		v[i].SetName("p "+ s);
-	}
-	for (int i = 0; i < 11; i++)
-	{
-		cout << v[i].GetName() <<endl;
-	}*/
-	system("pause");
-	return 0;
 }

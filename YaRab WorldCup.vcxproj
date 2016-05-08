@@ -78,11 +78,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Organizer.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Team.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Organizer.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="PublicFunctions.h" />
     <ClInclude Include="Team.h" />
