@@ -32,5 +32,8 @@
     <ClInclude Include="Team.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PublicFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
