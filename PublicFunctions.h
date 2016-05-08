@@ -34,20 +34,17 @@
 		 cout << s << endl;
 	 }
  }
+
  template <class T>
- void Checker (T &input, int f=0)
+ void Checker (T &input)
  {
-	 
-	while (!cin)
-	{
-		cout << "\n<WRONG ENTRY!>\nPlease check your entry and enter it correctly!\n";
-		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		cin >> input;
-	}
-	if(f){
-		cout << "\n<WRONG ENTRY!>";
-		cout <<"\n\nTo enter teams via file parsing press (1)\nTo enter teams manually press (2)\n=> ";
-		Checker(input,1);
+	while (!cin) {
+		if (!cin)
+		{
+			cout << "\n<WRONG ENTRY!>\nPlease check your entry and enter it correctly!\n=> ";
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cin >> input;
+		}
 	}
  }

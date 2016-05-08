@@ -1,6 +1,5 @@
 #include "Organizer.h"
 
-
 void Organizer::MakeSchedule(list<Team>& teams)
 {
 	int N;
@@ -13,10 +12,8 @@ void Organizer::MakeSchedule(list<Team>& teams)
 		matches.push(*it);
 		teams.erase(it);
 		it = teams.begin();
-	}
-	
-
-
+}
+}
 void Organizer::Results(Organizer o)
 {
 	int n = o.matches.size()/2;
@@ -104,6 +101,7 @@ void Organizer::Results(Organizer o)
 			break;
 
 		}
+	
 		//cout << randomNumber << " : " << randomNumber2 << endl;
 		o.result.push(randomNumber);
 		cout << o.result.top() << " : ";

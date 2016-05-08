@@ -15,8 +15,16 @@ int main () {
 	cout <<"Welcome to World Cup App\n========================="<<endl;
 	cout <<"To enter teams via file parsing press (1)\nTo enter teams manually press (2)\n=> ";
 	cin >> method;
-	Checker(method, 1);
+	Checker (method);
 	cout << endl;
+	while (!(method == 1 || method == 2))
+	{
+		cout <<"\n<WRONG ENTRY!>\n" << endl;
+		cout <<"To enter teams via file parsing press (1)\nTo enter teams manually press (2)\n=> ";
+		cin >> method;
+		Checker (method);
+	}
+	
 	//file parsing method
 	if (method == 1)
 	{
