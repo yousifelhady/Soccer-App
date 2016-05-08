@@ -28,7 +28,7 @@
 		 }
 		 s = o.matches.top().GetName();
 		 o.matches.pop();
-		 s += " Vs " ;
+		 s +=  " <--Vs--> " ;
 		 s += o.matches.top().GetName();
 		 o.matches.pop();
 		 cout << s << endl;

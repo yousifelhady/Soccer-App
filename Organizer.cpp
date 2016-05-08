@@ -12,10 +12,12 @@ void Organizer::MakeSchedule(list<Team>& teams)
 		matches.push(*it);
 		teams.erase(it);
 		it = teams.begin();
+	}
 }
-}
+
 void Organizer::Results(Organizer o)
 {
+	cout << "\nSimulating matches results\n---------------------------\n";
 	int n = o.matches.size()/2;
 	for (int i = 0; i < n; i++)
 	{
@@ -61,10 +63,8 @@ void Organizer::Results(Organizer o)
 		case 16:
 			randomNumber = 7;
 			break;
-
 		}
 		switch (weight2) {
-
 		case 0:
 		case 1:
 		case 2:
@@ -99,14 +99,15 @@ void Organizer::Results(Organizer o)
 		case 16:
 			randomNumber2 = 7;
 			break;
-
 		}
 	
 		//cout << randomNumber << " : " << randomNumber2 << endl;
 		o.result.push(randomNumber);
-		cout << o.result.top() << " : ";
+		cout << o.matches.top().GetName() << " [" << o.result.top() << "]" << " : ";
+		o.matches.pop();
 		o.result.push(randomNumber2);
-		cout << o.result.top() << endl;
+		cout << "[" << o.result.top() << "] " << o.matches.top().GetName() << endl;
+		o.matches.pop();
 
 
 
