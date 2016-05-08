@@ -1,3 +1,5 @@
+#ifndef _T_
+#define _T_
 #include "player.h"
 #include <vector>
 
@@ -19,3 +21,4 @@ private:
 	int NumberOfGoals;
 	vector<Player> Players;
 };
+#endif

@@ -1,17 +1,19 @@
 #include "Team.h"
+#include <list>
+#include "Organizer.h"
 
 int main () {
-	Team t;
-	vector<Player> v(11);
-	string s;
-	for (int i = 0; i < 11; i++)
+	Organizer o;
+	list<Team> t;
+	Team arr[16];
+	for (int i = 0; i < 16; i++)
 	{
-		s = to_string(i);
-		v[i].SetName("p "+ s);
+		arr[i].SetName("T" + to_string(i));
 	}
-	for (int i = 0; i < 11; i++)
+	for (int i = 0; i < 16; i++)
 	{
-		cout << v[i].GetName() <<endl;
+		t.push_back(arr[i]);
 	}
-	return 0;
+	o.MakeSchedule(t);
+	system("Pause");
 }
