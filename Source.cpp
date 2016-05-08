@@ -14,6 +14,6 @@ int main () {
 	{
 		t.push_back(arr[i]);
 	}
-	o.MakeSchedule(t);
+ 	o.MakeSchedule(t);
 	system("Pause");
 }
