@@ -14,3 +14,4 @@ void Organizer::MakeSchedule(list<Team>& teams)
 	}
 	
 }
+
