@@ -1,7 +1,8 @@
-#include <iostream>
-#include <string>
-#include "Player.h"
-using namespace std;
+#ifndef _T_
+#define _T_
+#include "player.h"
+#include <vector>
+
 class Team
 {
 public:
@@ -11,12 +12,13 @@ public:
 	string GetName();
 	void SetNumberOfGoals(int n);
 	int GetNumberOfGoals();
-	void SetPlayers(Player p[]);
-	Player[] GetPlayers();
+	void SetPlayers(vector<Player> p);
+	vector<Player> GetPlayers();
 
 
 private:
 	string Name;
 	int NumberOfGoals;
-	Player Players[18];
+	vector<Player> Players;
 };
+#endif
