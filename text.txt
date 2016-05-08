@@ -1,25 +1,207 @@
-egypt
-mohamed 1
-ahmed 2
-mido 3
-3ezz 4
-joe 5
-yousif 6
-magdy 7
-mamdooh 8
-ezzeldeen 9
-elhady 10
-abdel7ameed 11
+Egypt
+Shennawy 1
+Hegazy 6
+Rabia 3
+Gabr 4
+Gom3a 5
+Ghaly 14
+Salah 11
+Barakat 8
+AbuTreka 22
+Met3eb 10
+Zidan 9
 
-brazil
-ceaser 1
-luis 2
-he 3
-bo 4
-dd 5
-ss 6
-asd 7
-sdsd 8
-qwef 9
-hgfd 10
-weh 11
+Brazil
+Dida 1
+Cafu 2
+Carlos 6
+Silva 3
+Luez 5
+Ronaldinho 10
+Kaka 8
+Robinho 11
+Ronaldo 9
+Rivaldo 12
+Bele 99
+
+Germany
+Neuer 1
+Rudiger 16
+Mustafi 2
+Hummels 5
+Rudy 4
+Ozil 8
+Kroos 18
+Hector 3
+Muller 13
+Gotze 19
+Draxler 21
+
+Italy
+Buffon 1
+Darmian 4
+Bonucci 19
+Acerbi 15
+Florenzi 24
+Montolivo 18
+Motta 8
+Giaccherini 23
+Balotelli 9
+Shaarawi 29
+Zaza 7
+
+Argentina
+Romero 1
+Garay 2
+Zabaleta 3
+Heinze 4
+Fernandez 6
+Di_Maria 11
+Zanetti 18
+Rodriguez 11
+Messi 10
+Higuain 9
+Tevez 17
+
+England
+Forster 1
+Cahill 15
+Chris 5
+Barkley 8
+Walcott 14
+Welbeck 21
+Sturridge 9
+Vardy 10
+Drinkwater 4
+Rose 3
+Kane 19
+
+France
+Loris 1
+Henry 11
+Evra 3
+Trezeguet 10
+Zidane 5
+Benzema 9
+Coman 20
+Sagna 15
+Diarra 12
+Ribery 22
+Pogba 19
+
+Spain
+Casillas 1
+Ramos 15
+Pique 3
+Alba 18
+Puyol 5
+Silva 21
+Fabregas 10
+Xavi 6
+Iniesta 8
+Perdo 11
+Raul 9
+
+Tunisia
+Mathlouthi 16
+Abdennour 3
+Mohsni 4
+Hannachi 19
+Sassi 13
+Azouni 18
+Saihi 21
+Moncer 15
+Akaichi 9
+Badri 23
+Khenissi 11
+
+Algeria
+Bolhi 1
+Medjani 12
+Halliche 2
+Belkaroui 5
+Bensebaini 9
+Feghouli 10
+Boudebouz 14
+Mahrez 7
+Slimani 13
+Benzia 17
+Abeid 4
+
+Japan
+Kawashima 1
+Fujiharu 3
+Nagatomo 5
+Sakai 21
+Yoshida 22
+Kashiwagi 7
+Haraguchi 8
+Kagawa 10
+Honda 4
+Okazaki 9
+Usami 11
+
+Netherland
+Cillessen 1
+Vlaar 2
+Bruma 4
+Letschert 6
+Clasie 7
+Vilhena 8
+Janssen 12
+Clasie 66
+Ocadia 77
+Memphis 9
+Robben 11
+
+Chile
+Bravo 1
+Jara 2
+Diaz 5
+Lichnovsky 4
+Vidal 6
+Hernandez 7
+Valdes 15
+Sanchez 9
+Pinilla 10
+Vargas 22
+Henriquez 21
+
+Belguim
+Courtois 1
+Toby 5
+Boyata 4
+Cavanda 2
+Kompany	3
+Nainggolan 18
+Mousa 19
+Hazard 21
+Batshuayi 9
+Lukaku	10
+Mirallas 11
+
+Senegal
+Abdoulaye 1
+Sané 6
+Kara 2
+Pape 18 
+Gassama 21
+Idrissa 5
+Mohamed 12
+Cheikhou 8
+Keita 11
+Oumar 17
+Moussa 7
+
+Sweden
+Andreas 1
+Mikael 2
+Martin 5
+Hiljemark 13
+Zengin 22
+Kujovic 19
+Berg 11
+Durmaz 21
+Lewicki 18
+Kim 9
+Ibrahimovic 10

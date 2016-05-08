@@ -3,30 +3,19 @@
 #include "PublicFunctions.h"
 #include <fstream>
 #include "Organizer.h"
+#include "time.h"
 
 int main () {
-	list<Team> t ,ti;
+	list<Team> t;
 	Team team;
 	vector<Player> v(11);
-	string s, teamName, playerName;
+	string teamName, playerName;
 	int nteams, playerNumber, method;
-	//mido's code
-	Organizer o;
-	Team arr[16];
-	for (int i = 0; i < 16; i++)
-	{
-		arr[i].SetName("T" + to_string(i));
-	}
-	for (int i = 0; i < 16; i++)
-	{
-		ti.push_back(arr[i]);
-	}
-
-	o.MakeSchedule(ti);
-	//end of mido's code
+	srand ( time(NULL) );
 	cout <<"Welcome to World Cup App\n========================="<<endl;
 	cout <<"To enter teams via file parsing press (1)\nTo enter teams manually press (2)\n=> ";
 	cin >> method;
+	Checker(method, 1);
 	cout << endl;
 	//file parsing method
 	if (method == 1)
@@ -50,6 +39,7 @@ int main () {
 				}
 				team.SetPlayers(v);
 				t.push_back(team);
+				team.DisplayTeamInfo();
 			}
 		}
 		myReadFile.close();
@@ -59,11 +49,13 @@ int main () {
 	{
 		cout <<"Enter number of teams: ";
 		cin >> nteams;
+		Checker(nteams);
 		cout << endl;
 		for (int i = 1; i <= nteams; i++)
 		{
 			cout <<"Enter the name of team " << i <<" : ";
 			cin >> teamName;
+			Checker(teamName);
 			cout << endl;
 			team.SetName(teamName);
 			cout <<"Enter the Name & Number for each player in team " << "( " << team.GetName() << " )" << endl;
@@ -73,8 +65,10 @@ int main () {
 				{
 					cout << ii + 1 << "st Player Name: ";
 					cin >> playerName;
+					Checker(playerName);
 					cout << ii + 1 << "st Player Number: ";
 					cin >> playerNumber;
+					Checker(playerNumber);
 					v[ii].SetName(playerName);
 					v[ii].SetNumber(playerNumber);
 				}
@@ -82,8 +76,10 @@ int main () {
 				{
 					cout << ii + 1 << "nd Player Name: ";
 					cin >> playerName;
+					Checker(playerName);
 					cout << ii + 1 << "nd Player Number: ";
 					cin >> playerNumber;
+					Checker(playerNumber);
 					v[ii].SetName(playerName);
 					v[ii].SetNumber(playerNumber);
 				}
@@ -91,24 +87,37 @@ int main () {
 				{
 					cout << ii + 1 << "rd Player Name: ";
 					cin >> playerName;
+					Checker(playerName);
 					cout << ii + 1 << "rd Player Number: ";
 					cin >> playerNumber;
+					Checker(playerNumber);
 					v[ii].SetName(playerName);
 					v[ii].SetNumber(playerNumber);
 				}
 				else {
 					cout << ii + 1 << "th Player Name: ";
 					cin >> playerName;
+					Checker(playerName);
 					cout << ii + 1 << "th Player Number: ";
 					cin >> playerNumber;
+					Checker(playerNumber);
 					v[ii].SetName(playerName);
 					v[ii].SetNumber(playerNumber);
 				}
 			}
-			cout <<"End of team " << "( " << team.GetName() << " )\n" << endl;
+			cout <<"-----------------------\nEnd of team " << "( " << team.GetName() << " )\n" << endl;
 			team.SetPlayers(v);
 			t.push_back(team);
+			team.DisplayTeamInfo();
 		}
 	}
 	
+	//mido's code
+	Organizer o;
+	o.MakeSchedule(t);
+	TeamSchedulerDisplayer(o);
+	//end of mido's code
+
+	
+	system("pause");
 }

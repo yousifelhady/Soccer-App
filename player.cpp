@@ -1,5 +1,9 @@
 #include "player.h"
 
+Player::Player()
+{
+	NumOFGoals = 0;
+}
 void Player::SetName(string n)
 {
 	Name = n;

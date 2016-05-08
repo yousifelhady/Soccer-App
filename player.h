@@ -6,6 +6,7 @@ using namespace std;
 class Player
 {
 public:
+	Player();
 	void SetName(string n);
 	void SetNumOFGoals(int n);
 	void SetNumber(int n);

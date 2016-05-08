@@ -14,7 +14,7 @@ public:
 	int GetNumberOfGoals();
 	void SetPlayers(vector<Player> p);
 	vector<Player> GetPlayers();
-
+	void DisplayTeamInfo ();
 
 private:
 	string Name;
