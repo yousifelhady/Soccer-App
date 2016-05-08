@@ -1,5 +1,6 @@
 #ifndef _player_
 #define _player_
+#include <iostream>
 #include <string>
 using namespace std;
 class Player

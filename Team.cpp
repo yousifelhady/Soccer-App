@@ -23,10 +23,14 @@ int Team::GetNumberOfGoals() {
 	return NumberOfGoals;
 }
 
-void Team::SetPlayers(Player p[]) {
-	memcpy(Players, p, 11);
+void Team::SetPlayers(vector<Player> p) {
+	Players = p;
 }
 
-Player[] Team::GetPlayers() {
-	return Players;
+vector<Player> Team::GetPlayers() {
+	vector<Player> tmp;
+	for (vector<Player>::iterator it = Players.begin() ; it !=Players.end() ; it++) {
+		tmp.push_back(*it);
+	}
+	return tmp;
 }
