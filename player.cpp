@@ -24,7 +24,3 @@ int Player::GetNumber()
 {
 	return Number;
 }
-
-
-
-
