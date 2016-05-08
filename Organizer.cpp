@@ -1,15 +1,16 @@
 #include "Organizer.h"
 
-
-void Organizer::MakeSchedule(list<Team> teams)
+void Organizer::MakeSchedule(list<Team>& teams)
 {
 	int N;
 	for (int i = 0; i < 16; i++)
 	{
-		N = rand() % 16;
+		N = rand() % teams.size();
 		list<Team> ::iterator it;
 		it = next(teams.begin(), N);
-		cout << it->GetName();
+		matches.push(*it);
+		teams.erase(it);
+		it = teams.begin();
 	}
 	
 }
