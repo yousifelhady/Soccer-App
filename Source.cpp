@@ -123,8 +123,6 @@ int main () {
 	//mido's code
 	Organizer o;
 	o.MakeSchedule(t);
-	TeamSchedulerDisplayer(o);
-	o.Results(o);
 	//end of mido's code
-
+	system("pause");
 }

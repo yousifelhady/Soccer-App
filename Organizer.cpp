@@ -13,12 +13,16 @@ void Organizer::MakeSchedule(list<Team>& teams)
 		teams.erase(it);
 		it = teams.begin();
 	}
+	TeamSchedulerDisplayer(*this);
+	Results(*this);
+
+
 }
 
 void Organizer::Results(Organizer o)
 {
 	cout << "\nSimulating matches results\n---------------------------\n";
-	int n = o.matches.size()/2;
+	int n = o.matches.size() / 2;
 	for (int i = 0; i < n; i++)
 	{
 		int weight = rand() % 16;
@@ -100,31 +104,84 @@ void Organizer::Results(Organizer o)
 			randomNumber2 = 7;
 			break;
 		}
-	
+		if (randomNumber == randomNumber2)
+		{
+			randomNumber++;
+		}
 		//cout << randomNumber << " : " << randomNumber2 << endl;
 		o.result.push(randomNumber);
-		cout << o.matches.top().GetName() << " [" << o.result.top() << "]" << " : ";
-		o.matches.pop();
 		o.result.push(randomNumber2);
-		cout << "[" << o.result.top() << "] " << o.matches.top().GetName() << endl;
-		o.matches.pop();
 
 
 
-	/*	if (randomNumber == randomNumber2 && randomNumber != 3)
+		/*if (randomNumber == randomNumber2 && randomNumber != 3)
 		{
 			cout << "extra time -> result -> ";
 			cout << randomNumber << " : " << randomNumber + 1 << endl;
 		}
-*/
-	/*	if (randomNumber == randomNumber2 && randomNumber == 3)
+
+		if (randomNumber == randomNumber2 && randomNumber == 3)
 		{
 			cout << "extra time -> result -> ";
 			cout << randomNumber << " : " << randomNumber << endl;
 			cout << "Penalety time -> result -> ";
 			cout << "5" << " : " << "6" << endl;
 		}
-*/
+
 	}
+	*/
+	}
+	Organizer::PrintResult(o.matches, o.result);
+	o.Qualify();
+}
+void Organizer::Qualify()
+{
+	list<Team> teams;
+	int iterations = result.size()/2;
+	int first, second;
+	for (int i = 0; i < iterations; i++)
+	{
+		first = result.top();
+		result.pop();
+		second = result.top();
+		result.pop();
+		if (first > second)
+		{
+			teams.push_back(matches.top());
+			matches.pop();
+			loser.push_back(matches.top());
+			matches.pop();
+
+		}
+		else
+		{
+			loser.push_back(matches.top());
+			matches.pop();
+			teams.push_back(matches.top());
+			matches.pop();
+
+		}
+	}
+	if (teams.size() == 1)
+	{
+		cout << "winner is " <<teams.begin()->GetName()<<endl;
+		return;
+	}
+	MakeSchedule(teams);
+}
+
+void Organizer::PrintResult(stack<Team> m, stack<int> r)
+{
+	int length = m.size() / 2;
+	for (int i = 0; i < length; i++)
+	{
+		cout << m.top().GetName() << " [" << r.top() << "]" << " : ";
+		m.pop();
+		r.pop();
+		cout << "[" << r.top() << "] " << m.top().GetName() << endl;
+		m.pop();
+		r.pop();
+	}
+	
 
 }
