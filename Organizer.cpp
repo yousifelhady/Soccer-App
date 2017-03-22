@@ -1,8 +1,24 @@
 #include "Organizer.h"
 
+void Organizer::SetAllTeams(list<Team> t) {
+	AllTeams = t;
+}
+
+list<Team> Organizer::GetAllTeams() {
+	return AllTeams;
+}
+
+void Organizer::SetMatchGoals(Team& t, int goals)
+{
+	t.SetNumberOfGoals(goals);
+}
+
 void Organizer::MakeSchedule(list<Team>& teams)
 {
+
 	int N;
+	
+	//AllTeams = teams;
 	int count = teams.size();
 	for (int i = 0; i < count ; i++)
 	{
@@ -131,7 +147,7 @@ void Organizer::Results(Organizer o)
 	}
 	*/
 	}
-	Organizer::PrintResult(o.matches, o.result);
+	o.PrintResult(o.matches, o.result);
 	o.Qualify();
 }
 void Organizer::Qualify()
@@ -149,17 +165,14 @@ void Organizer::Qualify()
 		{
 			teams.push_back(matches.top());
 			matches.pop();
-			loser.push_back(matches.top());
 			matches.pop();
 
 		}
 		else
 		{
-			loser.push_back(matches.top());
 			matches.pop();
 			teams.push_back(matches.top());
 			matches.pop();
-
 		}
 	}
 	if (teams.size() == 1)
@@ -175,13 +188,21 @@ void Organizer::PrintResult(stack<Team> m, stack<int> r)
 	int length = m.size() / 2;
 	for (int i = 0; i < length; i++)
 	{
+		
 		cout << m.top().GetName() << " [" << r.top() << "]" << " : ";
-		m.pop();
+
+		int OldGoals = Team::Search(m.top().GetName(), GetAllTeams()).GetNumberOfGoals();
+		Team t = Team::Search(m.top().GetName(), GetAllTeams());
+		SetMatchGoals(t, OldGoals + r.top());
+		//t.SetNumberOfGoals(OldGoals + r.top());
+		m.pop(); 
 		r.pop();
 		cout << "[" << r.top() << "] " << m.top().GetName() << endl;
+		OldGoals = Team::Search(m.top().GetName(), GetAllTeams()).GetNumberOfGoals();
+		t = Team::Search(m.top().GetName(), GetAllTeams());
+		SetMatchGoals(t, OldGoals + r.top());
 		m.pop();
 		r.pop();
 	}
-	
-
 }
+

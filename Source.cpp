@@ -122,7 +122,19 @@ int main () {
 	
 	//mido's code
 	Organizer o;
+	o.SetAllTeams(t);
 	o.MakeSchedule(t);
+
+	
+	/*for (list<Team>::iterator ii = o.GetAllTeams().begin(); ii != o.GetAllTeams().end() ; ii++)
+	{
+		cout << ii->GetName() << "--->" << ii->GetNumberOfGoals() << endl;
+	}*/
 	//end of mido's code
-	system("pause");
+
+	string TName;
+	cout << endl << "choose your Favourit Team to show its information" << endl;
+	cin >> TName;
+	
+	Team::Search(TName, o.GetAllTeams()).DisplayTeamInfo();
 }

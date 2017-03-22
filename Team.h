@@ -2,6 +2,7 @@
 #define _T_
 #include "player.h"
 #include <vector>
+#include <list>
 
 class Team
 {
@@ -15,6 +16,7 @@ public:
 	void SetPlayers(vector<Player> p);
 	vector<Player> GetPlayers();
 	void DisplayTeamInfo ();
+	static Team Search(string name, list<Team>& team);
 
 private:
 	string Name;

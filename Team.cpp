@@ -45,3 +45,20 @@ void Team::DisplayTeamInfo() {
 	}
 	cout << endl;
 }
+
+Team Team::Search(string name, list<Team>& team)
+{
+	Team found;
+	list<Team> ::iterator it = team.begin();
+	for (; it != team.end(); it++)
+	{
+		if (it->GetName() == name)
+		{
+			found = *it;
+			return found;
+		}
+	}
+
+	
+	return found;
+}
